@@ -1,0 +1,45 @@
+1. Install Jdk, Eclipse, microsoft net framework, microsoft visual c++
+2. Install mysql installer commnity(using username = root, password=root) > install workbench
+3. Create a schema name "premierleague" and a table named "login" having two attribute 'username' & 'password'
+   insert the value of "login" table as username=test  and  password=test
+
+4. Now, create eclipse project named "premierleague"
+5. We create interface as New->Other->Swing Designer->JFrame
+
+Database table:
+
+For Cricket: fixture, mfixture(live score),teams,points table,semifinal,final,teaminfo,showteaminfo,coach
+
+For Football:ffixture,fteams,fpoints table,fsemifinal,ffinal,fteaminfo,fshowteaminfo,fcoach
+
+
+Interface
+--------------
+
+1. Coverpage
+2. login
+3. select (cricket or footabll)
+
+3.1(cricket)
+------------
+1.Menubar
+2.Fixture (Problem: Here we create table "teaminfo" on the basis of team names; if 'team names' contain space interface show error, 
+           it causes problem in sql query. We have to solve the Problem)
+3.ShowFixture
+4. Datainput[live score is updated using mfixture table and sent match status to fixture table]	
+5.Pointstable
+6. Semifinal[we can implement live score system as 'Datainput interface' using 'semifinal' and 'msemifinal' table]
+7. ShowSemifinal
+8. Final[we can implement live score system as 'Datainput interface' using 'final' and 'mfinal' table]
+9. ShowWinner
+10. Teaminfo
+11. Showteaminfo							
+
+
+***We must go to the "points table" interface after an entry in "data input" interface ;otherwise points table in database is not updated.
+This is because, we initialize "teams" and "points table" in "points table" interface
+
+
+3.2 (football)
+--------------
+Almost same as Cricket
